@@ -1,6 +1,7 @@
 飞牛fnos系统刷写wxy-oes设备硬盘灯状态：
 1.插入硬盘有读取或写入为绿灯，否则灯灭。
-install-led.sh为一键安装脚本：
+install-led.sh为一键安装脚本
+
 其他为分开部署脚本二选一。
 备注：
 disk-led-monitor.service为文件
