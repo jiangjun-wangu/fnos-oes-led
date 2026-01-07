@@ -1,0 +1,14 @@
+[Unit]
+Description=Multi-Disk LED Activity Monitor
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/multi_disk_led_monitor.sh
+ExecStopPost=/bin/bash -c 'for led in green:disk*; do echo 0 > /sys/class/leds/$led/brightness; done'
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
